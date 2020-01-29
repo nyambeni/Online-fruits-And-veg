@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { SellerRegComponent } from './seller-reg/seller-reg.component';
 import { BuyerRegComponent } from './buyer-reg/buyer-reg.component';
 import { HomeComponent } from './home/home.component';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
     RegistrationComponent,
     SellerRegComponent,
     BuyerRegComponent,
-    HomeComponent 
+    HomeComponent,
+    AdminComponent 
     
   ],
   imports: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './home/home.component';
       {path:"registration", component: RegistrationComponent},
       {path: "buyerReg", component: BuyerRegComponent},
       {path: "sellerReg", component:SellerRegComponent},
-      {path: "home", component: HomeComponent}
+      {path: "home", component: HomeComponent},
+      {path: "admin", component: AdminComponent},
+
 
     ])
   ],
