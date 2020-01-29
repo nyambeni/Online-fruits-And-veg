@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,7 @@ import { AdminComponent } from './admin/admin.component';
     SellerRegComponent,
     BuyerRegComponent,
     HomeComponent,
-    AdminComponent 
+    AdminComponent,
     
   ],
   imports: [
@@ -29,9 +30,8 @@ import { AdminComponent } from './admin/admin.component';
       {path: "buyerReg", component: BuyerRegComponent},
       {path: "sellerReg", component:SellerRegComponent},
       {path: "home", component: HomeComponent},
-      {path: "admin", component: AdminComponent},
-
-
+      {path: "admin", component: AdminComponent}
+  
     ])
   ],
   providers: [],
