@@ -10,6 +10,7 @@ import { BuyerRegComponent } from './buyer-reg/buyer-reg.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProductsComponent } from './products/products.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 
 
@@ -22,6 +23,7 @@ import { ProductsComponent } from './products/products.component';
     HomeComponent,
     AdminComponent,
     ProductsComponent,
+    AdminLoginComponent,
     
   ],
   imports: [
