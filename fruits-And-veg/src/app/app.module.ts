@@ -9,6 +9,7 @@ import { SellerRegComponent } from './seller-reg/seller-reg.component';
 import { BuyerRegComponent } from './buyer-reg/buyer-reg.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { ProductsComponent } from './products/products.component';
 
 
 
@@ -20,6 +21,7 @@ import { AdminComponent } from './admin/admin.component';
     BuyerRegComponent,
     HomeComponent,
     AdminComponent,
+    ProductsComponent,
     
   ],
   imports: [
@@ -30,7 +32,8 @@ import { AdminComponent } from './admin/admin.component';
       {path: "buyerReg", component: BuyerRegComponent},
       {path: "sellerReg", component:SellerRegComponent},
       {path: "home", component: HomeComponent},
-      {path: "admin", component: AdminComponent}
+      {path: "admin", component: AdminComponent},
+      {path: "products",component: ProductsComponent}
   
     ])
   ],
