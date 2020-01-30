@@ -1,9 +1,25 @@
-*
+form
 {
+    margin: 0 auto;
+    padding: 0;
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color : rgb(0, 140, 255);
+}
+ *
+ {
     margin: 0;
     padding: 0;
-    background: url(login/imagees.jpg);
+    font-family: sans-serif;
+    background : url(/src/app/pictures/spinach.webp);
     background-size: cover;
     background-position: centre;
-    font-family: sans-serif;
-   }
+    
+ }
+ body
+ {
+      background: url("/src/app/pictures/spinach.webp");
+ }
