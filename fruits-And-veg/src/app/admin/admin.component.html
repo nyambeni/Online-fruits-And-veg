@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap CRUD Data Table for Database with Modal Form</title>
+<title>Greenhouse Fruit And Veg</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,21 +14,24 @@
 <style type="text/css">
     body {
         color: #566787;
-		background: #f5f5f5;
+        background:url("assets/image/about.jpg");
+
 		font-family: 'Varela Round', sans-serif;
 		font-size: 13px;
-	}
+    }
+   
+    
 	.table-wrapper {
         background: #fff;
         padding: 20px 25px;
-        margin: 30px 0;
+        margin: 200px 0;
 		border-radius: 3px;
         box-shadow: 0 1px 1px rgba(0,0,0,.05);
     }
 	.table-title {        
 		padding-bottom: 15px;
 		background: #435d7d;
-		color: #fff;
+		color: white;
 		padding: 16px 30px;
 		margin: -20px -25px 10px;
 		border-radius: 3px 3px 0 0;
@@ -258,13 +261,14 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
+<body >
+     
     <div class="container">
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Suppliers <b>and </b> Customers</b></h2>
+						<h2><b>Manage </b> <b>Suppliers <b>and </b> Customers</b></h2>
 					</div>
 					<div class="col-sm-6">
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Supplier/Customer</span></a>
@@ -313,7 +317,7 @@ $(document).ready(function(){
                 </tbody>
             </table>
 			<div class="clearfix">
-                <div class="hint-text">Showing <b>1</b> out of <b>2</b> entries</div>
+                <div class="hint-text">Showing <b>1</b> out of <b>1</b> entries</div>
                 <ul class="pagination">
                     <li class="page-item disabled"><a href="#">Previous</a></li>
                     <li class="page-item active"><a href="#" class="page-link">1</a></li>
