@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProductsComponent } from './products/products.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import {LoginComponent } from './login/login.component';
 
 
 
@@ -24,6 +25,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     AdminComponent,
     ProductsComponent,
     AdminLoginComponent,
+    LoginComponent
     
   ],
   imports: [
@@ -35,7 +37,9 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
       {path: "sellerReg", component:SellerRegComponent},
       {path: "home", component: HomeComponent},
       {path: "admin", component: AdminComponent},
-      {path: "products",component: ProductsComponent}
+      {path: "products",component: ProductsComponent},
+      {path: "login",component: LoginComponent}
+    
   
     ])
   ],
