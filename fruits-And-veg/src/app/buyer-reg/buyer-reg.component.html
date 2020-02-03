@@ -1,5 +1,5 @@
 <body class="bg-gradient-primary">
- 
+
   <div class="container">
 
     <div class="card o-hidden border-0 shadow-lg my-5">
@@ -15,31 +15,59 @@
               <form class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="first-name" placeholder="First Name">
+                    <input required ngModel name= "firstname" minlength="3" maxlength="20" #firstname = "ngModel" type="text" class="form-control form-control-user" id="firstname" placeholder="First Name" >
+                       <div class="alert alert-danger" *ngIf="firstname.touched && !firstname.valid">
+                         <div *ngIf="firstname.errors.required"> First name is requird</div>
+                         <div *ngIf="firstname.errors.minlength">Your first name must be more than 3 char</div>
+                    
+                       </div>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="last-name" placeholder="Last Name">
+                    <input required ngModel name="lastname" minlength="3" maxlength="30" #lastname = "ngModel" type="text" class="form-control form-control-user" id="lastname" placeholder="Last Name" >
+                    <div class="alert alert-danger" *ngIf="lastname.touched &&!lastname.valid">
+                         <div *ngIf="lastname.errors.required"> last name is requird</div>
+                         <div *ngIf="lastname.errors.minlength">Your last name must be more than 3 char</div>
+                    </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="email" placeholder="Email Address">
+                  <input required ngModel name="email" minlength="10" pattern="'email'+@gmail.com" #email = "ngModel" type="email" class="form-control form-control-user" id="email" placeholder="Email Address" >
+                  <div class="alert alert-danger" *ngIf="email.touched &&!email.valid">
+                         <div *ngIf="email.errors.required">email is requird</div>
+                         <div *ngIf="email.errors.minlength">your email must be more than 3 char</div>
+                         <div *ngIf="email.errors.pattern">missing '@' or 'gmail.com'</div>
+                  </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input  type="text" class="form-control form-control-user" id="contact " placeholder="Contact number">
-                    
+                    <input required ngModel name="contact" minlength="10" maxlength="10" #contact = "ngModel" type="text" class="form-control form-control-user" id="contact " placeholder="Contact number" >
+                    <div class="alert alert-danger" *ngIf="contact.touched && !contact.valid">
+                         <div *ngIf="contact.errors.required"> contact is requird</div>
+                         <div *ngIf="contact.errors.minlength">contact must have 10 numbers</div>
+                    </div>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="username" placeholder="User Name">
+                    <input required ngModel name="username" minlength="5" #username = "ngModel" type="text" class="form-control form-control-user" id="username" placeholder="User Name" >
+                    <div class="alert alert-danger" *ngIf="username.touched && !username.valid">
+                         <div *ngIf="username.errors.required"> username is requird</div>
+                         <div *ngIf="username.errors.minlength">Your username must be more than 3 char</div>
+                    </div>
                   </div>
                 </div>
                 
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                    <input required ngModel name="password" minlength="8" #password = "ngModel" type="password" class="form-control form-control-user" id="password" placeholder="Password" >
+                    <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                         <div *ngIf="password.errors.required"> Password is requird</div>
+                         <div *ngIf="password.errors.minlength">Your password must be more than 8 charecters long</div>
+                    </div>
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="confirm-password" placeholder="Confirm password">
+                    <input required ngModel name="confirmpassword" #confirmpassword = "ngModel" type="password" class="form-control form-control-user" id="confirmpassword" placeholder="Confirm password">
+                    <div class="alert alert-danger" *ngIf="confirmpassword.touched && !confirmpassword.valid">
+                      <div *ngIf="confirmpassword != password">Password dont match</div>
+                    </div>
                   </div>
                 </div>
                 <a href="login.html" class="btn btn-primary btn-user btn-block">

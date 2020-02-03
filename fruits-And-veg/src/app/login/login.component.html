@@ -4,16 +4,19 @@
  
 <form class="form-signin">
 
-  <div id = "error"></div>
-  <form id = "form" action = "/" method="GET">
+  
   <label for="inputEmail" class="sr-only">Email address</label>
-  <label for="email">enter email</label>
-  <input type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+  <br>
+  <input ngModel name="email" #email = "ngModel" type="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+  <div *ngIf="!email.valid && email.touched">
+     <div *ngIf="email.errors.required">email is required</div>
+     
+  </div>
  
   <label for="inputPassword" class="sr-only">Password</label>
-  <label for="password">enter password</label>
-  <input type="password" id="password" class="form-control" placeholder="Password" required>
-
+  <br>
+  <input ngModel name="password" #password = "ngModel" type="password" id="password" class="form-control" placeholder="Password" required>
+    <div *ngIf="password.touched && !password.valid">Invalid password</div>
   <div class="checkbox mb-3">
 
     <label>
@@ -23,7 +26,7 @@
   <button class="btn btn-lg btn-primary btn-block" type="submit">LOG IN</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2020-2025</p>
  
-</form>
+
 </form>
 </body>
 

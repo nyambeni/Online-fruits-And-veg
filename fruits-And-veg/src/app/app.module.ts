@@ -12,6 +12,8 @@ import { AdminComponent } from './admin/admin.component';
 import { ProductsComponent } from './products/products.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import {LoginComponent } from './login/login.component';
+import { BsnavbarComponent } from './bsnavbar/bsnavbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -25,12 +27,15 @@ import {LoginComponent } from './login/login.component';
     AdminComponent,
     ProductsComponent,
     AdminLoginComponent,
-    LoginComponent
+    LoginComponent,
+    BsnavbarComponent,
+  
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     RouterModule.forRoot([
       {path:"registration", component: RegistrationComponent},
       {path: "buyerReg", component: BuyerRegComponent},
@@ -38,7 +43,8 @@ import {LoginComponent } from './login/login.component';
       {path: "home", component: HomeComponent},
       {path: "admin", component: AdminComponent},
       {path: "products",component: ProductsComponent},
-      {path: "login",component: LoginComponent}
+      {path: "login",component: LoginComponent},
+      {path: "nav",component: BsnavbarComponent}
     
   
     ])
