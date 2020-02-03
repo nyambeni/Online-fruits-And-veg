@@ -14,6 +14,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import {LoginComponent } from './login/login.component';
 import { BsnavbarComponent } from './bsnavbar/bsnavbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginService } from './login.service';
+
 
 
 
@@ -49,7 +51,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   
     ])
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
